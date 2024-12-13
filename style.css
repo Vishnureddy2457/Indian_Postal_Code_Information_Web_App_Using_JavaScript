@@ -1,0 +1,103 @@
+/* Global Styles */
+body {
+    background-color: #f4f4f9;
+    font-family: 'Roboto', sans-serif;
+    color: #333;
+}
+
+h1, h5 {
+    font-weight: 700;
+}
+
+/* Hero Section */
+.hero-section {
+    height: 300px;
+    background: linear-gradient(135deg, #007bff, #28a745);
+    color: white;
+    text-align: center;
+    padding: 2rem;
+}
+
+.hero-section h1 {
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.hero-section p {
+    font-size: 1.2rem;
+    margin-top: 1rem;
+}
+
+/* Search Cards */
+.search-card {
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.card-header {
+    font-size: 1.25rem;
+    padding: 1.5rem 1rem;
+}
+
+.card-body {
+    padding: 1.5rem;
+}
+
+.search-card input {
+    height: 45px;
+    font-size: 1rem;
+    border-radius: 5px;
+}
+
+/* Results Section */
+#results {
+    padding: 20px;
+}
+
+.result-card {
+    background-color: white;
+    border: 1px solid #ddd;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+.result-card h4 {
+    color: #007bff;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.result-card p {
+    margin: 0;
+    font-size: 0.9rem;
+    color: #555;
+}
+
+.alert {
+    margin-top: 20px;
+}
+
+/* Footer */
+.footer {
+    background-color: #333;
+    color: white;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

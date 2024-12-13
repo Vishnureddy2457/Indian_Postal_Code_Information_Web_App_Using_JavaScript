@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Indian Postal Code Information</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container-fluid hero-section d-flex align-items-center justify-content-center">
+        <div class="text-center">
+            <h1 class="display-4">Indian Postal Code Lookup</h1>
+            <p class="lead">Find postal details by Pincode or Area name effortlessly.</p>
+        </div>
+    </div>
+
+    <div class="container my-5">
+        <div class="row g-4">
+            <!-- Search by Pincode -->
+            <div class="col-md-6">
+                <div class="card search-card">
+                    <div class="card-header bg-primary text-white text-center">
+                        <h5><i class="fas fa-map-pin"></i> Search by Pincode</h5>
+                    </div>
+                    <div class="card-body">
+                        <input type="text" id="pincodeInput" class="form-control mb-3" placeholder="Enter Pincode">
+                        <button class="btn btn-primary w-100" onclick="searchByPincode()">
+                            <i class="fas fa-search"></i> Search
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Search by Area -->
+            <div class="col-md-6">
+                <div class="card search-card">
+                    <div class="card-header bg-success text-white text-center">
+                        <h5><i class="fas fa-city"></i> Search by Area</h5>
+                    </div>
+                    <div class="card-body">
+                        <input type="text" id="areaInput" class="form-control mb-3" placeholder="Enter Area Name">
+                        <button class="btn btn-success w-100" onclick="searchByArea()">
+                            <i class="fas fa-search"></i> Search
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Results Section -->
+        <div id="results" class="mt-5"></div>
+    </div>
+
+    <footer class="footer text-center py-4">
+        <p>&copy; 2024 Postal Lookup App. All Rights Reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
