@@ -11,28 +11,84 @@ h1, h5 {
 
 /* Hero Section */
 .hero-section {
-    height: 300px;
+    height: 400px; /* Increased height */
     background: linear-gradient(135deg, #007bff, #28a745);
     color: white;
     text-align: center;
     padding: 2rem;
+    position: relative;
+    overflow: hidden;
 }
 
 .hero-section h1 {
-    font-size: 3rem;
+    font-size: 3.5rem; /* Larger font size */
     font-weight: bold;
+    animation-delay: 0.2s;
 }
 
 .hero-section p {
-    font-size: 1.2rem;
+    font-size: 1.3rem; /* Slightly larger font size */
     margin-top: 1rem;
+    animation-delay: 0.4s;
+}
+
+/* Animations */
+@keyframes pop-in {
+    0% {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes slide-in-left {
+    0% {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slide-in-right {
+    0% {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.animate-pop-in {
+    animation: pop-in 0.6s ease-out forwards;
+}
+
+.animate-slide-in-left {
+    animation: slide-in-left 0.6s ease-out forwards;
+}
+
+.animate-slide-in-right {
+    animation: slide-in-right 0.6s ease-out forwards;
 }
 
 /* Search Cards */
 .search-card {
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1); /* Deeper shadow */
+    border-radius: 15px; /* Rounded corners */
     overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.search-card:hover {
+    transform: translateY(-5px); /* Lift card on hover */
+    box-shadow: 0px 8px 25px rgba(0, 0, 0, 0.15);
 }
 
 .card-header {
@@ -41,13 +97,26 @@ h1, h5 {
 }
 
 .card-body {
-    padding: 1.5rem;
+    padding: 2rem; /* More padding */
 }
 
 .search-card input {
-    height: 45px;
+    height: 50px; /* Taller input */
     font-size: 1rem;
-    border-radius: 5px;
+    border-radius: 8px; /* Rounded input */
+    border: 1px solid #ddd;
+    padding: 0 15px;
+}
+
+.search-card button {
+    height: 50px; /* Taller button */
+    font-size: 1.1rem;
+    border-radius: 8px; /* Rounded button */
+    transition: background-color 0.3s ease;
+}
+
+.search-card button:hover {
+    background-color: #0056b3; /* Darker primary color */
 }
 
 /* Results Section */
@@ -58,27 +127,28 @@ h1, h5 {
 .result-card {
     background-color: white;
     border: 1px solid #ddd;
-    padding: 20px;
+    padding: 25px; /* More padding */
     margin-bottom: 20px;
-    border-radius: 10px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 15px; /* Rounded corners */
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
     animation: fadeIn 0.5s ease-in-out;
 }
 
 .result-card h4 {
     color: #007bff;
     font-weight: bold;
-    margin-bottom: 10px;
+    margin-bottom: 15px; /* More spacing */
 }
 
 .result-card p {
     margin: 0;
-    font-size: 0.9rem;
+    font-size: 1rem; /* Larger font size */
     color: #555;
 }
 
 .alert {
     margin-top: 20px;
+    border-radius: 10px; /* Rounded alert */
 }
 
 /* Footer */
@@ -88,6 +158,7 @@ h1, h5 {
     position: relative;
     bottom: 0;
     width: 100%;
+    padding: 1.5rem 0; /* More padding */
 }
 
 /* Animations */
